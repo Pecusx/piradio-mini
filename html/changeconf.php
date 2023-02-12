@@ -236,9 +236,9 @@ if (isset($msg)) {
 				$share_string = '';
 			} else {
 				if ($login == "") {
-					$share_string = 'mount.cifs -o ro "'.$media_link.'" /share';
+					$share_string = 'mount.cifs -o vers="2.0",ro "'.$media_link.'" /share';
 				} else {
-					$share_string = 'mount.cifs -o user="'.$login.'",password="'.$password.'",ro "'.$media_link.'" /share';
+					$share_string = 'mount.cifs -o vers="2.0",user="'.$login.'",password="'.$password.'",ro "'.$media_link.'" /share';
 				}
 			}
 			echo "New network media folder configuration.\r\n";
